@@ -1,0 +1,30 @@
+{
+  "name": "@shiesuta/cli",
+  "version": "1.0.3",
+  "description": "Shiesuta projects managment tools",
+  "author": "IUwUI",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+	"bin",
+	"lib",
+	"README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p .",
+	"prepublishOnly": "rm -r lib; tsc -p ."
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@types/yargs": "^17.0.20",
+    "typescript": "^4.9.4"
+  },
+  "bin": {
+    "shiesuta-cli": "./bin/shiesuta-cli.js"
+  },
+  "dependencies": {
+    "yargs": "^17.6.2"
+  }
+}
